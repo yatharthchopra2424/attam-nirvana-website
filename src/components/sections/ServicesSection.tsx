@@ -130,7 +130,6 @@ export default function ServicesSection() {
                     href={service.href}
                     className="inline-flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-white font-semibold 
                              bg-accent-purple hover:bg-accent-purple/80 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-lg transition-all group/link min-h-[44px]">
-                  >
                     LEARN MORE
                     <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover/link:translate-x-1" />
                   </Link>
