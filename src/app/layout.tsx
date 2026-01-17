@@ -3,6 +3,7 @@ import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import CookieConsent from '@/components/layout/CookieConsent'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -23,6 +24,11 @@ export const metadata: Metadata = {
   description: 'Transform your life with Rupinder Dhillon. A 12-week program to break free from trauma, domestic abuse, and cultural conditioning. Reclaim your voice and inner strength.',
   keywords: ['trauma healing', 'domestic abuse recovery', 'women empowerment', 'life coaching', 'Rupinder Dhillon', 'Aattam Nirvana'],
   authors: [{ name: 'Rupinder Dhillon' }],
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'Aattam Nirvana | Soul Transformation Journey',
     description: 'Break free from trauma and reclaim your authentic self with personalized guidance.',
@@ -42,6 +48,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   )

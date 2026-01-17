@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Sparkles, Heart, Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
+import logoImg from '@/assets/favicon.png'
 
 const footerLinks = {
   quickLinks: [
@@ -18,57 +20,62 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { href: 'https://facebook.com', icon: Facebook, label: 'Facebook' },
-  { href: 'https://instagram.com', icon: Instagram, label: 'Instagram' },
-  { href: 'https://linkedin.com', icon: Linkedin, label: 'LinkedIn' },
-  { href: 'https://youtube.com', icon: Youtube, label: 'YouTube' },
+  { href: 'https://www.instagram.com/aattamnirvana', icon: Instagram, label: 'Instagram' },
+  { href: 'https://www.linkedin.com/in/rupi-dhillon-traumaliberator-transformationinterventionist-heart-ledfacilitator/', icon: Linkedin, label: 'LinkedIn' },
 ]
 
 export default function Footer() {
   return (
-    <footer className="bg-hero-gradient text-white">
-      {/* Main Footer Content */}
-      <div className="container-main py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* Brand Section */}
+    <footer className="bg-primary-800 text-white">
+      {/* Main Footer Content - Mobile Responsive */}
+      <div className="container-main py-10 sm:py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8 lg:gap-8">
+          {/* Brand Section - Mobile Optimized */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
-              <Sparkles className="w-8 h-8 text-accent-purple" />
-              <span className="text-xl font-poppins font-bold">
+            <Link href="/" className="flex items-center gap-1.5 sm:gap-2 mb-4 sm:mb-5 md:mb-6">
+              <div className="relative w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white rounded-full p-1">
+                <Image 
+                  src={logoImg}
+                  alt="Aattam Nirvana Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-lg sm:text-xl font-poppins font-bold">
                 Aattam<span className="text-primary-400">Nirvana</span>
               </span>
             </Link>
-            <p className="text-light-text text-sm leading-relaxed mb-6">
+            <p className="text-light-text text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 md:mb-6">
               Empowering women to break free from trauma, cultural conditioning, and self-doubt. 
               Your journey to healing and self-discovery starts here.
             </p>
-            {/* Social Links */}
-            <div className="flex gap-3">
+            {/* Social Links - Mobile Optimized */}
+            <div className="flex gap-2 sm:gap-2.5 md:gap-3">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center
                            transition-all duration-300 hover:bg-primary-500 hover:scale-110"
                   aria-label={social.label}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Mobile Responsive */}
           <div>
-            <h3 className="text-lg font-poppins font-semibold mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-poppins font-semibold mb-4 sm:mb-5 md:mb-6">Quick Links</h3>
+            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-light-text text-sm hover:text-white transition-colors duration-300
+                    className="text-light-text text-xs sm:text-sm hover:text-white transition-colors duration-300
                              hover:translate-x-1 inline-block"
                   >
                     {link.label}
@@ -78,15 +85,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services - Mobile Responsive */}
           <div>
-            <h3 className="text-lg font-poppins font-semibold mb-6">Services</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-poppins font-semibold mb-4 sm:mb-5 md:mb-6">Services</h3>
+            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-light-text text-sm hover:text-white transition-colors duration-300
+                    className="text-light-text text-xs sm:text-sm hover:text-white transition-colors duration-300
                              hover:translate-x-1 inline-block"
                   >
                     {link.label}
@@ -96,33 +103,24 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info - Mobile Responsive */}
           <div>
-            <h3 className="text-lg font-poppins font-semibold mb-6">Get In Touch</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-accent-purple mt-0.5 flex-shrink-0" />
+            <h3 className="text-base sm:text-lg font-poppins font-semibold mb-4 sm:mb-5 md:mb-6">Get In Touch</h3>
+            <ul className="space-y-3 sm:space-y-3.5 md:space-y-4">
+              <li className="flex items-start gap-2 sm:gap-2.5 md:gap-3">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent-purple mt-0.5 flex-shrink-0" />
                 <a
-                  href="mailto:hello@aattamnirvana.com"
-                  className="text-light-text text-sm hover:text-white transition-colors"
+                  href="mailto:connect@aattamnirvana.com"
+                  className="text-light-text text-xs sm:text-sm hover:text-white transition-colors break-all"
                 >
-                  hello@aattamnirvana.com
+                  connect@aattamnirvana.com
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-accent-purple mt-0.5 flex-shrink-0" />
-                <a
-                  href="tel:+1234567890"
-                  className="text-light-text text-sm hover:text-white transition-colors"
-                >
-                  +1 (234) 567-890
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-accent-purple mt-0.5 flex-shrink-0" />
-                <span className="text-light-text text-sm">
-                  Available Worldwide<br />
-                  Online Sessions
+              <li className="flex items-start gap-2 sm:gap-2.5 md:gap-3">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-accent-purple mt-0.5 flex-shrink-0" />
+                <span className="text-light-text text-xs sm:text-sm">
+                  Harrow HA3, UK<br />
+                  Online Sessions Available
                 </span>
               </li>
             </ul>
@@ -130,16 +128,18 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom Bar - Mobile Responsive */}
       <div className="border-t border-white/10">
-        <div className="container-main py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-light-text text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Aattam Nirvana. All rights reserved.
-            </p>
-            <p className="text-light-text text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-red-400 fill-current" /> for healing souls
-            </p>
+        <div className="container-main py-4 sm:py-5 md:py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 sm:gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <p className="text-light-text text-xs sm:text-sm text-center md:text-left">
+                © {new Date().getFullYear()} Aattam Nirvana. All rights reserved.
+              </p>
+              <Link href="/terms-and-conditions" className="text-light-text text-xs sm:text-sm hover:text-white transition-colors">
+                Terms & Conditions
+              </Link>
+            </div>
           </div>
         </div>
       </div>

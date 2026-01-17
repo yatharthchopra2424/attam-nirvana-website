@@ -30,35 +30,32 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-16 md:py-20 bg-white overflow-hidden">
-      {/* Background Elements */}
+    <section className="relative py-12 sm:py-16 md:py-20 bg-primary-800 overflow-hidden">
+      {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" 
-           style={{backgroundImage: 'radial-gradient(circle, #6B47A1 1px, transparent 1px)', backgroundSize: '40px 40px'}} />
+           style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
 
       <div className="container-main relative z-10 w-full max-w-7xl mx-auto">
-        {/* Section Header - 25% smaller */}
+        {/* Section Header - Mobile Optimized */}
         <FadeInUp>
-          <div className="max-w-3xl mb-10 md:mb-12">
-            <div className="flex items-center gap-2 mb-3">
-              <Quote className="w-6 h-6 text-primary-600" />
-              <p className="text-primary-600 font-semibold text-xs uppercase tracking-[0.3em]">
+          <div className="max-w-3xl mb-8 sm:mb-10 md:mb-12">
+            <div className="flex items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+              <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
+            <p className="text-accent-purple font-semibold text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] mb-2">
                 Testimonials
               </p>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-poppins font-bold text-dark-text leading-tight mb-5">
-              Stories of{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-cyan">
-                Transformation
-              </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-poppins font-bold text-white leading-tight mb-4 sm:mb-5">
+              Stories of Transformation
             </h2>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
               Real women sharing their journeys of healing, growth, and reclaiming their power.
             </p>
           </div>
         </FadeInUp>
 
-        {/* Masonry-style Layout */}
-        <div className="grid lg:grid-cols-12 gap-8">
+        {/* Masonry-style Layout - Mobile Responsive */}
+        <div className="grid lg:grid-cols-12 gap-5 sm:gap-6 md:gap-8">
           {/* Large Featured Testimonial - Left */}
           <StaggerContainer className="lg:col-span-7" staggerDelay={0.1}>
             <StaggerItem>
@@ -67,44 +64,44 @@ export default function TestimonialsSection() {
                 transition={{ duration: 0.3 }}
                 className="relative h-full"
               >
-                <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 
-                              rounded-3xl p-10 md:p-12 text-white h-full shadow-purple-lg relative overflow-hidden">
+                <div className="bg-primary-600 
+                              rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 text-white h-full shadow-purple-lg relative overflow-hidden">
                   {/* Decorative Elements */}
                   <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
                   <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-purple/20 rounded-full blur-3xl" />
 
                   {/* Content */}
                   <div className="relative z-10">
-                    {/* Badge - 25% smaller */}
-                    <div className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 
-                                  px-3 py-1.5 rounded-full mb-5">
-                      <Star className="w-3 h-3 text-accent-gold fill-current" />
-                      <span className="text-xs font-semibold">Featured Story</span>
+                    {/* Badge - Mobile Responsive */}
+                    <div className="inline-flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 
+                                  px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4 md:mb-5">
+                      <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-accent-gold fill-current" />
+                      <span className="text-[10px] sm:text-xs font-semibold">Featured Story</span>
                     </div>
 
-                    {/* Quote - 25% smaller */}
-                    <Quote className="w-12 h-12 text-accent-purple/50 mb-5" />
-                    <blockquote className="text-xl md:text-2xl font-poppins font-medium leading-relaxed mb-6">
+                    {/* Quote - Mobile Responsive */}
+                    <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent-purple/50 mb-3 sm:mb-4 md:mb-5" />
+                    <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl font-poppins font-medium leading-relaxed mb-4 sm:mb-5 md:mb-6">
                       "{testimonials[0].quote}"
                     </blockquote>
 
-                    {/* Rating - 25% smaller */}
-                    <div className="flex gap-0.5 mb-5">
+                    {/* Rating - Mobile Responsive */}
+                    <div className="flex gap-0.5 mb-3 sm:mb-4 md:mb-5">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-accent-gold fill-current" />
+                        <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-accent-gold fill-current" />
                       ))}
                     </div>
 
-                    {/* Author - 25% smaller */}
-                    <div className="flex items-center gap-3">
-                      <div className="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center">
-                        <Heart className="w-6 h-6 text-white fill-current" />
+                    {/* Author - Mobile Responsive */}
+                    <div className="flex items-center gap-2.5 sm:gap-3">
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                        <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-current" />
                       </div>
                       <div>
-                        <p className="text-lg font-poppins font-bold text-white">
+                        <p className="text-base sm:text-lg font-poppins font-bold text-white">
                           {testimonials[0].author}
                         </p>
-                        <p className="text-sm text-accent-purple font-medium">
+                        <p className="text-xs sm:text-sm text-accent-purple font-medium">
                           {testimonials[0].title}
                         </p>
                       </div>
@@ -115,40 +112,40 @@ export default function TestimonialsSection() {
             </StaggerItem>
           </StaggerContainer>
 
-          {/* Stacked Testimonials - Right */}
-          <StaggerContainer className="lg:col-span-5 space-y-8" staggerDelay={0.15}>
+          {/* Stacked Testimonials - Right - Mobile Responsive */}
+          <StaggerContainer className="lg:col-span-5 space-y-5 sm:space-y-6 md:space-y-8" staggerDelay={0.15}>
             {[testimonials[1], testimonials[2]].map((testimonial, index) => (
               <StaggerItem key={testimonial.author}>
                 <motion.div
                   whileHover={{ x: 8, y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white border border-primary-100 rounded-xl p-6 shadow-purple-sm hover:shadow-purple-md 
+                  className="bg-primary-900 border border-primary-700 rounded-xl p-4 sm:p-5 md:p-6 shadow-purple-sm hover:shadow-purple-md 
                            transition-shadow"
                 >
-                  {/* Rating - 25% smaller */}
-                  <div className="flex gap-0.5 mb-3">
+                  {/* Rating - Mobile Responsive */}
+                  <div className="flex gap-0.5 mb-2.5 sm:mb-3">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-accent-gold fill-current" />
+                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-gold fill-current" />
                     ))}
                   </div>
 
-                  {/* Quote - 25% smaller */}
-                  <blockquote className="text-sm text-gray-700 leading-relaxed mb-5">
+                  {/* Quote - Mobile Responsive */}
+                  <blockquote className="text-xs sm:text-sm text-white/80 leading-relaxed mb-4 sm:mb-5">
                     "{testimonial.quote}"
                   </blockquote>
 
-                  {/* Author - 25% smaller */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-primary-100">
-                    <div className="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center">
-                      <span className="text-primary-600 font-bold font-poppins text-base">
+                  {/* Author - Mobile Responsive */}
+                  <div className="flex items-center gap-2 pt-2.5 sm:pt-3 border-t border-primary-700">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-primary-700 flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold font-poppins text-sm sm:text-base">
                         {testimonial.author.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <p className="text-sm font-poppins font-bold text-dark-text">
+                      <p className="text-xs sm:text-sm font-poppins font-bold text-white">
                         {testimonial.author}
                       </p>
-                      <p className="text-xs text-primary-600">
+                      <p className="text-xs text-accent-purple">
                         {testimonial.title}
                       </p>
                     </div>
@@ -171,7 +168,7 @@ export default function TestimonialsSection() {
               <motion.div
                 key={stat.label}
                 whileHover={{ y: -3 }}
-                className="text-center p-4 bg-light-bg rounded-xl border border-primary-100"
+                className="text-center p-4 bg-primary-900/30 rounded-xl border border-primary-700"
               >
                 <div className="flex items-center justify-center gap-1.5 mb-1.5">
                   {stat.icon && <stat.icon className="w-4 h-4 text-accent-gold fill-current" />}

@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sparkles } from 'lucide-react'
+import logoImg from '@/assets/favicon.png'
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/free-clarity-call', label: 'Free Clarity Call' },
+  { href: '/book-session', label: 'Book a Session' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -43,26 +45,28 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-lg shadow-purple-sm py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-white/95 backdrop-blur-lg shadow-purple-sm py-2 sm:py-3'
+          : 'bg-transparent py-3 sm:py-5'
       } ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
       <div className="container-main">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Sparkles 
-                className={`w-8 h-8 transition-colors duration-300 ${
-                  isScrolled ? 'text-primary-600' : 'text-white'
-                } group-hover:text-accent-cyan`} 
+          {/* Logo - Mobile Optimized */}
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group">
+            <div className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full p-1 shadow-md">
+              <Image 
+                src={logoImg}
+                alt="Aattam Nirvana Logo"
+                fill
+                className="object-contain transition-transform duration-300 group-hover:scale-110"
+                priority
               />
               <div className="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <span
-              className={`text-xl font-poppins font-bold transition-colors duration-300 ${
+              className={`text-lg sm:text-2xl font-poppins font-extrabold tracking-tight transition-colors duration-300 ${
                 isScrolled ? 'text-primary-900' : 'text-white'
               }`}
             >
@@ -76,10 +80,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-medium transition-colors duration-300 link-hover ${
+                className={`relative text-lg font-bold tracking-tight transition-colors duration-300 link-hover ${
                   isScrolled
                     ? 'text-dark-text hover:text-primary-600'
-                    : 'text-white/90 hover:text-white'
+                    : 'text-white hover:text-white'
                 }`}
               >
                 {link.label}
@@ -91,7 +95,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className={`btn-primary text-sm ${
+              className={`btn-primary text-xs sm:text-sm ${
                 !isScrolled && 'bg-white text-primary-900 hover:bg-primary-100'
               }`}
             >
@@ -99,10 +103,10 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Enhanced touch target */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`md:hidden p-2.5 rounded-lg transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center ${
               isScrolled ? 'text-dark-text' : 'text-white'
             }`}
             aria-label="Toggle mobile menu"
@@ -111,7 +115,7 @@ export default function Header() {
           </button>
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Enhanced */}
         <AnimatePresence>
           {isMobileMenuOpen && (
             <motion.div
@@ -121,7 +125,7 @@ export default function Header() {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-6 space-y-4">
+              <div className="py-4 sm:py-6 space-y-2 sm:space-y-4">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.href}
@@ -132,9 +136,9 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block py-2 text-lg font-medium transition-colors ${
+                      className={`block py-2.5 px-2 text-base sm:text-lg font-medium transition-colors rounded-lg min-h-[44px] flex items-center ${
                         isScrolled ? 'text-dark-text' : 'text-white'
-                      } hover:text-primary-500`}
+                      } hover:text-primary-500 hover:bg-primary-50/10`}
                     >
                       {link.label}
                     </Link>
@@ -144,12 +148,12 @@ export default function Header() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: navLinks.length * 0.1 }}
-                  className="pt-4"
+                  className="pt-2 sm:pt-4"
                 >
                   <Link
                     href="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="btn-primary w-full text-center"
+                    className="btn-primary w-full text-center justify-center"
                   >
                     GET IN TOUCH
                   </Link>

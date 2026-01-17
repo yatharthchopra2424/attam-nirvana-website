@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-light-bg">
+    <div className="min-h-screen flex items-center justify-center bg-primary-800">
       <div className="text-center px-4">
         <h1 className="text-8xl font-poppins font-bold text-primary-600 mb-4">404</h1>
         <h2 className="text-2xl font-poppins font-bold text-dark-text mb-4">

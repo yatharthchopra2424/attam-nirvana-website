@@ -9,36 +9,36 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary Purple Palette
+        // Primary Purple Palette - Updated with new theme colors
         primary: {
-          900: '#2D1B4E', // Darkest purple - backgrounds
-          800: '#3D2660', // Dark purple - primary sections
-          700: '#4D3170', // Medium dark purple - interactive
-          600: '#6B47A1', // Primary - buttons, accents
-          500: '#8B5CF6', // Light purple - hover states
-          400: '#A78BFA', // Lighter purple
-          300: '#C4B5FD', // Very light purple
-          200: '#DDD6FE', // Extra light purple
-          100: '#EDE9FE', // Nearly white purple
+          900: '#3a1fa3', // Darkest purple - backgrounds  
+          800: '#4225C4', // Dark purple - primary sections (main background)
+          700: '#533acb', // Medium dark purple
+          600: '#6e1fd2', // Primary - buttons, accents
+          500: '#752fbb', // Medium purple
+          400: '#8A44E2', // Light purple - hover states
+          300: '#894df8', // Lighter purple
+          200: '#9F7AEA', // Adjusted light purple
+          100: '#E9D8FD', // Subtle white purple
         },
         // Accent Colors
         accent: {
           cyan: '#06B6D4',
-          purple: '#D8B4FE',
+          purple: '#8A44E2',
           gold: '#F59E0B',
         },
         // Semantic Colors
         success: '#10B981',
         // Custom neutrals
         light: {
-          bg: '#F3F0FF',      // Light purple-tinted bg
+          bg: '#F9F6FB',      // Very light tint of #4f1071
           text: '#E9D5FF',    // Light purple text on dark
         },
         dark: {
           text: '#1F2937',    // Dark text on light bg
         },
         border: {
-          purple: '#4D3170',  // Purple borders
+          purple: '#533BC6',  // Purple borders
           light: '#E5D4FF',   // Light purple borders
         },
       },
@@ -47,15 +47,15 @@ const config: Config = {
         inter: ['var(--font-inter)', 'sans-serif'],
       },
       boxShadow: {
-        'purple-sm': '0 4px 12px rgba(45, 27, 78, 0.08)',
-        'purple-md': '0 12px 24px rgba(45, 27, 78, 0.15)',
-        'purple-lg': '0 20px 40px rgba(45, 27, 78, 0.3)',
-        'hero': '0 25px 50px -12px rgba(45, 27, 78, 0.25)',
+        'purple-sm': '0 4px 12px rgba(66, 37, 196, 0.08)',
+        'purple-md': '0 12px 24px rgba(66, 37, 196, 0.15)',
+        'purple-lg': '0 20px 40px rgba(66, 37, 196, 0.3)',
+        'hero': '0 25px 50px -12px rgba(66, 37, 196, 0.25)',
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #2D1B4E 0%, #3D2660 50%, #4D3170 100%)',
-        'card-gradient': 'linear-gradient(180deg, rgba(107, 71, 161, 0.05) 0%, rgba(107, 71, 161, 0.1) 100%)',
-        'text-gradient': 'linear-gradient(135deg, #6B47A1 0%, #8B5CF6 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #4225C4 0%, #533BC6 50%, #6e1fd2 100%)',
+        'card-gradient': 'linear-gradient(180deg, rgba(83, 59, 198, 0.05) 0%, rgba(83, 59, 198, 0.1) 100%)',
+        'text-gradient': 'linear-gradient(135deg, #6e1fd2 0%, #8A44E2 100%)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
