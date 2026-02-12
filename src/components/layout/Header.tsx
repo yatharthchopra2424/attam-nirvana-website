@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sparkles } from 'lucide-react'
 import logoImg from '@/assets/favicon.png'
+import StarBorder from '@/components/ui/StarBorder'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -103,16 +104,23 @@ export default function Header() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
-            <Link
-              href="/contact"
-              className="btn-primary text-xs sm:text-sm bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300"
-              style={{ 
-                textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
-                boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
-              }}
+            <StarBorder
+              as="span"
+              color="#c99a1d"
+              thickness={2}
+              speed="6s"
             >
-              GET IN TOUCH
-            </Link>
+              <Link
+                href="/contact"
+                className="btn-primary text-xs sm:text-sm bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white/30 transition-all duration-300"
+                style={{ 
+                  textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)',
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2)'
+                }}
+              >
+                GET IN TOUCH
+              </Link>
+            </StarBorder>
           </div>
 
           {/* Mobile Menu Button - Enhanced touch target */}
@@ -159,13 +167,20 @@ export default function Header() {
                   transition={{ delay: navLinks.length * 0.1 }}
                   className="pt-2 sm:pt-4"
                 >
-                  <Link
-                    href="/contact"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="btn-primary w-full text-center justify-center"
+                  <StarBorder
+                    as="span"
+                    color="#c99a1d"
+                    thickness={2}
+                    speed="6s"
                   >
-                    GET IN TOUCH
-                  </Link>
+                    <Link
+                      href="/contact"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="btn-primary w-full text-center justify-center"
+                    >
+                      GET IN TOUCH
+                    </Link>
+                  </StarBorder>
                 </motion.div>
               </div>
             </motion.div>
