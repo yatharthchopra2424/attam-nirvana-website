@@ -95,7 +95,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://assets.calendly.com" />
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
       </head>
-      <body className="font-inter">
+      <body className="font-inter" suppressHydrationWarning>
         <Analytics />
         <LenisProvider>
           <CustomScrollbar />

@@ -7,31 +7,31 @@ const traumaSymptoms = [
   {
     title: 'Flashbacks or intrusive memories.',
     icon: Brain,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
     color: 'from-[#b8860b] to-[#c99a1d]'
   },
   {
     title: 'Avoidance of triggers.',
     icon: ShieldAlert,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
     color: 'from-[#c99a1d] to-[#daa520]'
   },
   {
     title: 'Emotional numbness or detachment.',
     icon: HeartCrack,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
     color: 'from-[#daa520] to-[#b8860b]'
   },
   {
     title: 'Hypervigilance or heightened arousal.',
     icon: Eye,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
     color: 'from-[#b8860b] to-[#daa520]'
   },
   {
     title: 'Altered beliefs or feelings about oneself/world.',
     icon: Sparkles,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
     color: 'from-[#c99a1d] to-[#b8860b]'
   }
 ]

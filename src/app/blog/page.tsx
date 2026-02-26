@@ -98,15 +98,15 @@ export default function BlogPage() {
                 Don't Wait to Start Your <span className="text-accent-purple">Healing Journey</span>
               </h2>
               <p className="text-white/80 mb-8">
-                While our blog is in progress, you can start your transformation today with our proven programs.
+                While our blog is in progress, you can start your transformation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  href="/services"
+                  href="/about"
                   size="lg"
                   className="bg-accent-purple hover:bg-accent-purple/80 text-white group"
                 >
-                  Explore Services
+                  Learn About Rupi
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <Button

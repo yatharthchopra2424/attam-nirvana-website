@@ -191,7 +191,7 @@ export function getAllServicesSchema() {
       currency: 'GBP',
       duration: '12 weeks',
       serviceType: 'Life Coaching',
-      url: `${SITE_URL}/services#aattam`
+      url: `${SITE_URL}/free-clarity-call`
     },
     {
       name: '1-on-1 Intensive Coaching Session',
@@ -215,19 +215,19 @@ export function getAllServicesSchema() {
       name: 'Trauma Recovery Coaching',
       description: 'Specialized coaching for survivors of trauma and domestic abuse. Combines evidence-based techniques with compassionate support.',
       serviceType: 'Trauma Therapy',
-      url: `${SITE_URL}/services#trauma-recovery`
+      url: `${SITE_URL}/free-clarity-call`
     },
     {
       name: 'Women Empowerment Coaching',
       description: 'Break free from cultural conditioning and reclaim your authentic self. Designed specifically for women seeking liberation and empowerment.',
       serviceType: 'Life Coaching',
-      url: `${SITE_URL}/services#women-empowerment`
+      url: `${SITE_URL}/free-clarity-call`
     },
     {
       name: 'NLP & Hypnotherapy Sessions',
       description: 'Transform limiting beliefs and patterns at the subconscious level using Master NLP and clinical hypnotherapy techniques.',
       serviceType: 'Hypnotherapy',
-      url: `${SITE_URL}/services#nlp-hypnotherapy`
+      url: `${SITE_URL}/book-session`
     }
   ];
 

@@ -7,15 +7,8 @@ const footerLinks = {
   quickLinks: [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Rupi' },
-    { href: '/services', label: 'Services' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
-  ],
-  services: [
-    { href: '/services#healing', label: 'Trauma Healing' },
-    { href: '/services#coaching', label: '1-on-1 Coaching' },
-    { href: '/services#aattam', label: 'Aattam Program' },
-    { href: '/services#workshops', label: 'Workshops' },
   ],
 }
 
@@ -72,24 +65,6 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-poppins font-semibold mb-4 sm:mb-5 md:mb-6">Quick Links</h3>
             <ul className="space-y-2 sm:space-y-2.5 md:space-y-3">
               {footerLinks.quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/90 text-xs sm:text-sm hover:text-white transition-colors duration-300
-                             hover:translate-x-1 inline-block"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services - Mobile Responsive */}
-          <div>
-            <h3 className="text-base sm:text-lg font-poppins font-semibold mb-4 sm:mb-5 md:mb-6">Services</h3>
-            <ul className="space-y-2 sm:space-y-2.5 md:space-y-3">
-              {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

@@ -11,7 +11,7 @@ const services = [
     description: 'One-on-one personalized sessions to help you process and heal from past trauma with compassionate guidance.',
     duration: '60 mins',
     rating: 5,
-    href: '/services#trauma-healing',
+    href: '/free-clarity-call',
   },
   {
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80',
@@ -19,7 +19,7 @@ const services = [
     description: 'A six-week initiation for women ready to return to their voice, boundaries, and inner truth. Begin choosing yourself.',
     duration: '6 weeks',
     rating: 5,
-    href: '/services#soul-liberation',
+    href: '/free-clarity-call',
   },
   {
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=80',
@@ -27,7 +27,7 @@ const services = [
     description: 'A six-month embodied journey into liberation, identity, and self-leadership. Come home to self. Not a programme to consume. A return to who you are.',
     duration: '6 months',
     rating: 5,
-    href: '/services#aattam-program',
+    href: '/free-clarity-call',
     featured: true,
   },
   {
@@ -36,7 +36,7 @@ const services = [
     description: 'Connect with a supportive community of women on similar healing journeys through facilitated group sessions.',
     duration: '2 hours',
     rating: 4.9,
-    href: '/services#group-workshops',
+    href: '/contact',
   },
   {
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80',
@@ -44,7 +44,7 @@ const services = [
     description: 'Discover and align with your core values to create a life of authenticity and purpose.',
     duration: '3 hours',
     rating: 5,
-    href: '/services#values-workshop',
+    href: '/contact',
   },
   {
     image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80',
@@ -52,7 +52,7 @@ const services = [
     description: 'Tailored wellness and empowerment programs for corporate teams to foster psychological safety and growth.',
     duration: 'Customizable',
     rating: 5,
-    href: '/services#corporate',
+    href: '/contact',
   },
 ]
 

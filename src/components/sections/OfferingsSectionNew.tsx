@@ -124,6 +124,7 @@ export function OfferingsSectionNew({ offerings }: OfferingsSectionProps) {
 
                   {/* CTA */}
                   <button
+                    disabled
                     className={`
                       inline-flex items-center gap-2
                       px-4 py-2 sm:px-6 sm:py-3
@@ -133,6 +134,7 @@ export function OfferingsSectionNew({ offerings }: OfferingsSectionProps) {
                       text-white text-sm sm:text-base font-poppins font-600
                       transition-all duration-300
                       group/btn
+                      cursor-default opacity-60
                     `}
                   >
                     Learn More

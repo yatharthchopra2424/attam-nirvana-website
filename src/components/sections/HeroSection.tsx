@@ -121,7 +121,7 @@ export default function HeroSection() {
               </Button>
               
               <Button 
-                href="/book-session" 
+                href="/free-clarity-call" 
                 variant="outline" 
                 size="lg" 
                 className="w-full sm:w-auto border-2 border-[#b8860b] text-white bg-[#b8860b]/10 hover:bg-[#b8860b]/20 hover:border-[#c99a1d] backdrop-blur-sm transition-all duration-300 font-semibold shadow-lg shadow-[#b8860b]/20 relative overflow-hidden group"

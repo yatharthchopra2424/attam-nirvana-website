@@ -1,27 +1,17 @@
 'use client'
 
-import { Instagram, Youtube, Facebook, Linkedin } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 
 const socialLinks = [
   {
     label: 'Instagram',
-    href: 'https://www.instagram.com',
+    href: 'https://www.instagram.com/aattamnirvana',
     Icon: Instagram,
   },
   {
-    label: 'Facebook',
-    href: 'https://www.facebook.com',
-    Icon: Facebook,
-  },
-  {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com',
+    href: 'https://www.linkedin.com/in/rupi-dhillon-traumaliberator-transformationinterventionist-heart-ledfacilitator/',
     Icon: Linkedin,
-  },
-  {
-    label: 'YouTube',
-    href: 'https://www.youtube.com',
-    Icon: Youtube,
   },
 ]
 
