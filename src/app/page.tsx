@@ -152,7 +152,8 @@ export default function HomePage() {
         {/* Content - Base Layer */}
         <HeroSection />
         <AboutPreviewSection />
-        <ServicesSection />\n        <TestimonialsSection />
+        <ServicesSection />
+        <TestimonialsSection />
         <CTASection />
         
         {/* Global Fixed Ambient Light Layer - Blended on Top */}
