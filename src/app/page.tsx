@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic'
 import type { Metadata } from 'next'
 import {
   HeroSection,
-  TraumaSymptomsSection,
   AboutPreviewSection,
   ServicesSection,
   TestimonialsSection,
@@ -152,7 +151,6 @@ export default function HomePage() {
       <div className="relative bg-primary-700">
         {/* Content - Base Layer */}
         <HeroSection />
-        <TraumaSymptomsSection />
         <AboutPreviewSection />
         <ServicesSection />\n        <TestimonialsSection />
         <CTASection />

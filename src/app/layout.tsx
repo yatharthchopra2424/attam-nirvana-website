@@ -6,6 +6,8 @@ import CustomScrollbar from '@/components/layout/CustomScrollbar'
 import SocialSidebar from '@/components/layout/SocialSidebar'
 import CookieConsent from '@/components/layout/CookieConsent'
 import Analytics from '@/components/Analytics'
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -105,6 +107,8 @@ export default function RootLayout({
           <Footer />
           <CookieConsent />
         </LenisProvider>
+        <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   )
