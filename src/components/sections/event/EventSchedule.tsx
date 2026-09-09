@@ -12,8 +12,8 @@ export default function EventSchedule() {
         <FadeInUp>
           <div className="max-w-2xl mx-auto text-center mb-12">
             <p className="section-overline !text-[#ffd966]">Three evenings. One invitation.</p>
-            <h2 className="section-title text-white">Because transformation doesn&rsquo;t begin with doing more</h2>
-            <p className="section-subtitle text-white/75 mx-auto">Sometimes it begins with coming home.</p>
+            <h2 className="section-title text-white">Sometimes It Begins With Coming HOME</h2>
+            <p className="section-subtitle text-white/75 mx-auto">Because transformation doesn&rsquo;t always begin with doing more.</p>
           </div>
         </FadeInUp>
 

@@ -4,7 +4,7 @@ import { EVENT_TIME_LABEL } from '@/lib/eventConfig'
 
 export const metadata: Metadata = {
   title: 'Reserve Your Free Spot | A Journey Home to Self',
-  description: 'Register for the free 3-day live event, A Journey Home to Self, 18-20 September 2026 on Zoom.',
+  description: 'Register for the free 3-evening live event, A Journey Home to Self, 18-20 September 2026 on Zoom.',
 }
 
 export default function RegisterPage() {

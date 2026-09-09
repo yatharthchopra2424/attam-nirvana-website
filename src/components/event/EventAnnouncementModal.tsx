@@ -63,7 +63,7 @@ export default function EventAnnouncementModal() {
               <div className="mx-auto mb-5 w-12 h-12 rounded-full bg-[#ffd966]/15 flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-[#ffd966]" />
               </div>
-              <p className="section-overline !text-[#ffd966] !mb-2">A free 3-day live event</p>
+              <p className="section-overline !text-[#ffd966] !mb-2">A free 3-evening live event</p>
               <h2 id="event-modal-title" className="text-2xl sm:text-3xl font-poppins font-bold text-white leading-tight mb-3">
                 {EVENT_NAME}
               </h2>

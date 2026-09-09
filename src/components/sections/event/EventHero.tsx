@@ -18,7 +18,7 @@ export default function EventHero() {
             animate={{ opacity: 1, y: 0 }}
             className="section-overline !text-[#ffd966]"
           >
-            A free 3-day immersion for women ready to come back to themselves
+            A free 3-evening immersion for women ready to come back to themselves
           </motion.p>
 
           <motion.h1
